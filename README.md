@@ -39,7 +39,7 @@ Welcome to the **Node.js Tutorial**! This beginner-friendly project walks you th
 
 ### 4. Visit in Browser 
 
-- http://localhost:3000/
+
 
 
 ### 5. Project Structure
