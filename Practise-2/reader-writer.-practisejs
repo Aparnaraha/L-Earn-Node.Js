@@ -1,0 +1,26 @@
+const fs = require('fs');
+const path = require('path');
+
+// Define the file path
+const filePath = path.join(__dirname, 'example.txt');
+
+// ----------- Write to the file -----------
+const contentToWrite = 'Hello from Day 2 of Node.js tutorial!\n';
+
+// Append content to the file
+fs.appendFile(filePath, contentToWrite, (err) => {
+    if (err) {
+        console.error('Error writing to file:', err);
+        return;
+    }
+    console.log('Content written successfully!');
+
+    // ----------- Read from the file -----------
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error reading the file:', err);
+            return;
+        }
+        console.log('Content of the file:\n', data);
+    });
+});
