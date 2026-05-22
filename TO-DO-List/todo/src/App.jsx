@@ -131,11 +131,11 @@ function App() {
 
       {/* LOOP THROUGH TODOS */}
       {todos.map((todo) => (
-      <div key={todo.id} className={styles.todoCard}> 
+      <div key={todo._id} className={styles.todoCard}> 
         <p>{todo.text}</p>
         <button
           className={styles.deleteBtn}
-          onClick={() => deleteTodo(todo.id)} // ✅ Fixed ID target
+          onClick={() => deleteTodo(todo._id)} // ✅ Fixed ID target
         >
           Delete
         </button>
